@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "90ee7551-fa84-409a-8f7c-2d0967571806",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21154437",
+		"_collection_link": "https://www.postman.com/red-shuttle-406918/workspace/comp4382-order-management-api/collection/21154437-90ee7551-fa84-409a-8f7c-2d0967571806?action=share&creator=21154437&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All Customers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4MzE0NTQzLCJleHAiOjE2ODg5MTkzNDN9.r461P3blYF658YLxfLBb104qodQugX11GdKQBBJAtAwkCB5M7HSFowcslK4lTwxRta6TXGUe2U-6ebMNidj2bw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/customers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4MzE0NTQzLCJleHAiOjE2ODg5MTkzNDN9.r461P3blYF658YLxfLBb104qodQugX11GdKQBBJAtAwkCB5M7HSFowcslK4lTwxRta6TXGUe2U-6ebMNidj2bw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/customers/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Basel\",\r\n    \"lastName\": \"Salman\",\r\n    \"bornAt\": \"2000/09/07\",\r\n    \"username\": \"basel\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customers/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer's Orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYXNlbCIsImlhdCI6MTY4ODMxNDk5MywiZXhwIjoxNjg4OTE5NzkzfQ.9dMjIldqRpizPZcj7cNC9lKDIMjP9dPuAJk_0LOfIH1wElPRaQ0_S2eKdYsY9ywIQxtxGH2XueXUvLHKVX6WMw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/customers/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customers",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"slug\": \"eggs\",\r\n    \"name\": \"Eggs (Large, dozen)\",\r\n    \"reference\": \"EGG001\",\r\n    \"price\": 3.00,\r\n    \"vat\": 0.1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/products",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Stockability",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/products/3/stockable?stockable=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"3",
+								"stockable"
+							],
+							"query": [
+								{
+									"key": "stockable",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stock",
+			"item": [
+				{
+					"name": "Get All Stocks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stocks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stock By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/stocks/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stocks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Stock",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": 3,\r\n    \"quantity\": 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/stocks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stocks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get All Orders",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "basel",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJic2FsbWFuIiwiaWF0IjoxNjg4Mzk0MzM5LCJleHAiOjE2ODg5OTkxMzl9.NEAe9fi5XnnYNhdJbb5im0i9QAEUyY9CuRi1vr-hY_jCziT-UElL9XGU_45F8y7_zzqs4GPpCY3_Xk0tcBCtNg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/orders/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Order",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "basel",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": 3,\r\n    \"orders\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"quantity\": 5\r\n        },\r\n        {\r\n            \"productId\": 2,\r\n            \"quantity\": 30\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"bsalman\",\r\n    \"password\": \"123123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8081",
+			"type": "string"
+		}
+	]
+}

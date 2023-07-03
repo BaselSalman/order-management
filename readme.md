@@ -1,5 +1,5 @@
-// Commands used to build the spring boot application using maven:
-mvn clean
+// Commands used to build the spring boot application using maven:\n
+mvn clean\n
 mvn install -DskipTests
 
 // Commands used to build the docker image of the spring boot application:
